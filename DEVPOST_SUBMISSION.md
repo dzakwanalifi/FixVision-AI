@@ -157,6 +157,7 @@ https://github.com/dzakwanalifi/FixVision-AI
 - [x] Thumbnail Image: 3:2 ratio, JPG/PNG
 - [x] Image Gallery: Screenshots of the app
     - Desktop: [desktop-preview.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/desktop-preview.png)
+    - Analysis: [analysis-preview.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/analysis-preview.png)
     - Tablet: [tablet-preview.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/tablet-preview.png)
     - Mobile: [mobile-preview.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/mobile-preview.png)
 
