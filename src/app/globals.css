@@ -62,6 +62,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 768px) {
+
+  html,
+  body {
+    overflow-y: auto;
+    height: auto;
+  }
+}
+
 /* Sublte Grain Texture Over body */
 body::after {
   content: "";

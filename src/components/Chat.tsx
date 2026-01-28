@@ -90,7 +90,7 @@ export default function Chat({ deviceContext }: ChatProps) {
                     </svg>
                 </div>
                 <span>Follow-up Chat</span>
-                <div className={styles.badge}>Gemini 2.0</div>
+                <div className={styles.badge}>Gemini</div>
             </div>
 
             {deviceContext && (

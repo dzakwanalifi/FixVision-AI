@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GeminiService } from "@/lib/services/gemini";
 
-const geminiService = new GeminiService();
+// Lazy-loaded service (avoid build-time initialization)
+let geminiService: GeminiService | null = null;
+
+function getGeminiService() {
+    if (!geminiService) geminiService = new GeminiService();
+    return geminiService;
+}
 
 export async function POST(request: NextRequest) {
     try {
@@ -15,7 +21,8 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        const response = await geminiService.chat(messages, deviceContext);
+        const gemini = getGeminiService();
+        const response = await gemini.chat(messages, deviceContext);
 
         return NextResponse.json(response);
     } catch (error) {
