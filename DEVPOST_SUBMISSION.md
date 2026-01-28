@@ -98,11 +98,11 @@ This agentic approach ensures high-quality, contextually accurate results every 
 
 ## 👥 Team
 
-- **Your Name** — Full-Stack Developer & AI Engineer
+- **Dzakwan Alifi** — AI Engineer
 
 ---
 
 ## 🔗 Links
 
 - **Live Demo**: [https://fixvision-ai-233122189624.asia-southeast1.run.app](https://fixvision-ai-233122189624.asia-southeast1.run.app)
-- **GitHub Repository**: *[Add your repo link here]*
+- **GitHub Repository**: [https://github.com/dzakwanalifi/FixVision-AI](https://github.com/dzakwanalifi/FixVision-AI)
