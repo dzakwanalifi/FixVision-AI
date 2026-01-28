@@ -4,7 +4,7 @@
 
 ---
 
-## � GENERAL INFO
+## GENERAL INFO
 
 ### Project Name (60 chars max)
 ```
@@ -18,7 +18,7 @@ AI-powered repair assistant that analyzes photos of broken devices and generates
 
 ---
 
-## � PROJECT DETAILS
+## PROJECT DETAILS
 
 ### About the Project (Markdown)
 
@@ -36,10 +36,12 @@ We asked: **What if AI could look at your broken device and tell you exactly how
 
 1. **Sees the Problem** — Upload a photo of your broken device (phone, laptop, appliance).
 2. **Analyzes with Vision AI** — Our agentic system uses Gemini's multimodal capabilities to identify the issue.
-3. **Generates Step-by-Step Guides** — Receive clear, actionable repair instructions tailored to YOUR specific problem.
-4. **Annotates Visually** — Get an annotated image highlighting exactly where to focus.
+3. **Searches for Solutions** — Uses **Google Search Grounding** to find the latest repair guides, error codes, and troubleshooting steps.
+4. **Generates Step-by-Step Guides** — Receive clear, actionable repair instructions with cited sources.
+5. **Annotates Visually** — Get an annotated image highlighting exactly where to focus.
+6. **Chat for Follow-ups** — Ask follow-up questions using our AI chat powered by **Gemini 2.5 Flash Lite** with real-time web search.
 
-It's like having a professional repair technician in your pocket — available 24/7, for free.
+It's like having a professional repair technician in your pocket — available 24/7, with access to the latest repair knowledge from the web.
 
 ## How we built it
 
@@ -47,17 +49,19 @@ It's like having a professional repair technician in your pocket — available 2
 |-------|-----------|
 | **Frontend** | Next.js 16 (App Router), React 19, Framer Motion |
 | **Styling** | Vanilla CSS with Glassmorphism 3.0 design system |
-| **AI Engine** | Google Gemini 3 Flash (Agentic Vision) |
+| **AI Engine** | Google Gemini 3 Flash (Agentic Vision + Google Search Grounding) |
+| **Chat AI** | Gemini 2.5 Flash Lite with Google Search Grounding |
 | **Image Processing** | Sharp.js for server-side annotation |
 | **Deployment** | Google Cloud Run, Artifact Registry, Cloud Build |
 | **Runtime** | Bun (ultra-fast builds) + Node.js Alpine (production) |
 
 ### Agentic Architecture
 
-Our AI doesn't just respond — it **thinks, acts, and observes** in a loop:
+Our AI doesn't just respond — it **thinks, searches, acts, and observes** in a loop:
 1. **Think**: Analyze the image and identify potential issues.
-2. **Act**: Generate repair steps and bounding box coordinates.
-3. **Observe**: Validate the output and refine if needed.
+2. **Search**: Query Google for the latest repair documentation and solutions.
+3. **Act**: Generate repair steps and bounding box coordinates with cited sources.
+4. **Observe**: Validate the output and refine if needed.
 
 This agentic approach ensures high-quality, contextually accurate results every time.
 
@@ -100,7 +104,7 @@ Next.js, React, TypeScript, Framer Motion, Google Gemini AI, Sharp.js, Google Cl
 
 ---
 
-## � TRY IT OUT LINKS
+## TRY IT OUT LINKS
 
 > Add these URLs in the "Try it out" links section:
 

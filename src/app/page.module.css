@@ -393,22 +393,92 @@
   }
 }
 
-/* Analysis Layout - Split View */
+/* Analysis Layout - Three Column View */
 .analysis {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: var(--space-xl);
+  grid-template-columns: 1.2fr 1fr 340px;
+  grid-template-rows: 1fr;
+  /* Force single row */
+  gap: var(--space-lg);
   padding: var(--space-xl);
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
+  overflow: hidden;
+  /* Prevent page scroll */
+}
+
+.chatCol {
+  height: 100%;
+  min-height: 0;
+  /* Critical for flex scroll */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.stepsCol {
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 1200px) {
+  .analysis {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .chatCol {
+    grid-column: 1 / -1;
+    height: 280px;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .analysis {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+    padding: var(--space-lg);
+  }
+
+  .visualCol {
+    flex-shrink: 0;
+    height: auto;
+    min-height: auto;
+  }
+
+  .stepsCol {
+    flex-shrink: 0;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .chatCol {
+    flex-shrink: 0;
+    height: 400px;
+    min-height: 400px;
+  }
+
+  .imageViewport {
+    height: 280px;
+    min-height: 280px;
+  }
 }
 
 .visualCol {
   height: 100%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  overflow: hidden;
 }
 
 .analysisHeader {

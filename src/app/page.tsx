@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, Variants } from "framer-motion";
-import { ImageUploader, AnnotatedImage, RepairSteps } from "@/components";
+import { ImageUploader, AnnotatedImage, RepairSteps, Chat } from "@/components";
 import styles from "./page.module.css";
 
 interface AnalysisResult {
@@ -357,6 +357,42 @@ export default function Home() {
                     <div>
                       <h3 style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Analysis Pending</h3>
                       <p style={{ fontSize: '0.9rem' }}>Click &quot;Consult AI&quot; to generate <br /> step-by-step repair instructions.</p>
+                    </div>
+                  </div>
+                )}
+              </motion.aside>
+
+              {/* Chat Column - Separate from Repair Steps */}
+              <motion.aside
+                className={styles.chatCol}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+              >
+                {result ? (
+                  <Chat deviceContext={{ device: result.device, issue: result.issue }} />
+                ) : (
+                  <div style={{
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    gap: '16px',
+                    opacity: 0.4,
+                    background: 'var(--glass-bg)',
+                    backdropFilter: 'blur(20px)',
+                    borderRadius: '20px',
+                    border: '1px solid var(--glass-border)',
+                    padding: '24px'
+                  }}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    <div>
+                      <p style={{ fontSize: '0.85rem', fontWeight: 600 }}>AI Chat</p>
+                      <p style={{ fontSize: '0.75rem', marginTop: '4px' }}>Ask follow-up questions after diagnosis</p>
                     </div>
                   </div>
                 )}
