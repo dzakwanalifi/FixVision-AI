@@ -165,9 +165,14 @@ export default function Home() {
         <div className={styles.headerContent}>
           <div className={styles.logo}>
             <div className={styles.logoIcon}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 5v2M12 17v2M5 12h2M17 12h2" />
+              <svg width="28" height="28" viewBox="0 0 413 351" fill="none">
+                <rect y="70.3716" width="70.3716" height="70.3716" fill="currentColor" />
+                <rect x="70.3716" width="140.743" height="70.3716" fill="currentColor" />
+                <rect x="70.3716" y="140.743" width="69.5135" height="69.5135" fill="currentColor" />
+                <rect y="210.257" width="70.3716" height="70.3716" fill="currentColor" />
+                <rect x="139.885" y="210.257" width="70.3716" height="70.3716" fill="currentColor" />
+                <rect x="210.257" y="280.628" width="70.3716" height="70.3716" fill="currentColor" />
+                <path d="M317.843 280.628H280.628V170.401L325.799 70.3716H412.79L317.843 280.628Z" fill="currentColor" />
               </svg>
             </div>
             <span>FixVision</span>

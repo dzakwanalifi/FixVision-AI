@@ -47,14 +47,10 @@
 }
 
 .logoIcon {
-  width: 32px;
-  height: 32px;
-  background: var(--bg-accent);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--accent);
 }
 
 .navBadge {
