@@ -154,7 +154,7 @@ https://github.com/dzakwanalifi/FixVision-AI
 - [x] Live Demo Link: Cloud Run URL
 - [x] GitHub Repository: Public repo with source code
 - [ ] Video Demo: Upload to YouTube (2-3 min)
-- [x] Thumbnail Image: 3:2 ratio, JPG/PNG
+- [x] Thumbnail Image: [og-image.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/og-image.png)
 - [x] Image Gallery: Screenshots of the app
     - Desktop: [desktop-preview.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/desktop-preview.png)
     - Analysis: [analysis-preview.png](https://github.com/dzakwanalifi/FixVision-AI/blob/master/public/screenshots/analysis-preview.png)

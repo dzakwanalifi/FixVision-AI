@@ -2,7 +2,7 @@
 
 > AI-powered repair assistant that analyzes photos of broken devices and generates step-by-step repair guides with visual annotations.
 
-![Desktop Preview](./public/screenshots/desktop-preview.png)
+![Hero Preview](./public/screenshots/og-image.png)
 
 ## ✨ Features
 
