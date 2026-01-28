@@ -50,8 +50,26 @@ export class ImageService {
                 const colors = ["#FF3B30", "#FF9500", "#34C759", "#007AFF", "#AF52DE"];
                 const color = colors[index % colors.length];
 
+                // Calculate label dimensions
+                const labelText = ann.label || `Area ${index + 1}`;
+                const labelWidth = Math.max(labelText.length * 9 + 20, 60);
+                const labelHeight = 28;
+
+                // Position label: prefer above the box, but if too close to top, put inside
+                let labelY = absY1 - labelHeight - 4;
+                let labelTextY = absY1 - 12;
+
+                if (labelY < 0) {
+                    // Put label inside the box at the top
+                    labelY = absY1 + 4;
+                    labelTextY = absY1 + labelHeight - 6;
+                }
+
+                // Ensure label doesn't go off the right edge
+                const labelX = Math.min(absX1, width - labelWidth - 4);
+
                 return `
-        <!-- Box ${index + 1}: ${ann.label} -->
+        <!-- Box ${index + 1}: ${labelText} -->
         <rect 
           x="${absX1}" 
           y="${absY1}" 
@@ -60,24 +78,25 @@ export class ImageService {
           fill="none" 
           stroke="${color}" 
           stroke-width="4"
-          rx="4"
+          rx="6"
         />
         <rect 
-          x="${absX1}" 
-          y="${Math.max(0, absY1 - 28)}" 
-          width="${Math.min(ann.label.length * 10 + 16, width - absX1)}" 
-          height="26" 
+          x="${labelX}" 
+          y="${labelY}" 
+          width="${labelWidth}" 
+          height="${labelHeight}" 
           fill="${color}"
           rx="4"
         />
         <text 
-          x="${absX1 + 8}" 
-          y="${Math.max(18, absY1 - 8)}" 
+          x="${labelX + 10}" 
+          y="${labelTextY + 6}" 
           fill="white" 
-          font-family="Arial, sans-serif"
-          font-size="14" 
-          font-weight="bold"
-        >${this.escapeXml(ann.label)}</text>
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="15" 
+          font-weight="700"
+          dominant-baseline="middle"
+        >${this.escapeXml(labelText)}</text>
       `;
             })
             .join("");
