@@ -50,3 +50,5 @@ next-env.d.ts
 # Documentation & Artifacts
 *.md
 !README.md
+!DEVPOST_SUBMISSION.md
+REDEPLOY.md
