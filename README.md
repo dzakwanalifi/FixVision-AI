@@ -81,15 +81,6 @@ src/
     └── image.ts         # Sharp.js image processing
 ```
 
-## 🐳 Deployment
-
-This project is deployed on Google Cloud Run. See [REDEPLOY.md](./REDEPLOY.md) for deployment instructions.
-
-```bash
-# Build and deploy
-gcloud builds submit --tag asia-southeast1-docker.pkg.dev/coret-in/fixvision/fixvision-ai:latest .
-gcloud run deploy fixvision-ai --image asia-southeast1-docker.pkg.dev/coret-in/fixvision/fixvision-ai:latest --region asia-southeast1
-```
 
 ## 👨‍💻 Author
 
@@ -101,4 +92,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ for the Google AI Hackathon 2025
+Built with ❤️ for the Orygn AI Open Hackathon
