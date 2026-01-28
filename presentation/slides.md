@@ -108,13 +108,13 @@ h1 {
 </div>
 
 <div class="flex flex-col items-center justify-center h-full relative z-10">
-  <div class="badge mb-6" v-motion :initial="{opacity:0, y:30}" :enter="{opacity:1, y:0, transition:{delay:200}}">
+  <div class="badge mb-6">
     🔧 AI-Powered Repair
   </div>
   
-  <h1 class="text-6xl mb-6" v-motion :initial="{opacity:0, scale:0.9}" :enter="{opacity:1, scale:1, transition:{delay:400}}">Repair Smarter with <br/>Agentic Vision</h1>
+  <h1 class="text-6xl mb-6">Repair Smarter with <br/>Agentic Vision</h1>
   
-  <div class="w-160 mt-4" v-motion :initial="{opacity:0, y:50}" :enter="{opacity:1, y:0, transition:{delay:800}}">
+  <div class="w-160 mt-4">
     <div class="glass-card p-3">
       <img src="/desktop-preview.png" class="rounded-xl shadow-lg" />
     </div>
@@ -129,15 +129,15 @@ layout: statement
 <div class="blob blob-blue" style="top: -200px; right: 50%;"></div>
 
 <div class="flex flex-col items-center justify-center h-full text-center">
-  <div class="icon-box accent-rose mb-6" v-motion :initial="{scale:0}" :enter="{scale:1}">
+  <div class="icon-box accent-rose mb-6">
     <carbon-warning-alt class="text-2xl" />
   </div>
   
-  <h2 class="text-4xl font-extrabold mb-6 leading-tight max-w-3xl" v-motion :initial="{opacity:0, y:20}" :enter="{opacity:1, y:0, transition:{delay:200}}">
+  <h2 class="text-4xl font-extrabold mb-6 leading-tight max-w-3xl">
     Devices break. Generic guides fail. <br/><span class="text-rose-500">E-waste piles up.</span>
   </h2>
   
-  <div class="grid grid-cols-3 gap-6 mt-10 max-w-4xl" v-motion :initial="{opacity:0, y:30}" :enter="{opacity:1, y:0, transition:{delay:400}}">
+  <div class="grid grid-cols-3 gap-6 mt-10 max-w-4xl">
     <div class="glass-card p-6 text-center">
       <div class="text-4xl font-extrabold text-rose-500 mb-2">62M</div>
       <div class="text-sm text-muted">Metric tons e-waste/year</div>
@@ -153,6 +153,10 @@ layout: statement
       <div class="text-sm text-muted">Replace instead of repair</div>
       <div class="source">Consumer Reports 2024</div>
     </div>
+  </div>
+  
+  <div class="mt-8 text-xs font-semibold text-rose-600 bg-rose-50 px-4 py-2 rounded-full border border-rose-100 italic">
+    🚩 The Opportunity Gap: 50% of self-repair failures stem from inaccurate or generic guidance.
   </div>
 </div>
 
@@ -236,9 +240,10 @@ layout: two-cols
 
 ::right::
 
-<div class="h-full flex items-center justify-center p-4" v-motion :initial="{opacity:0, scale:0.9}" :enter="{opacity:1, scale:1, transition:{delay:400}}">
-  <div class="glass-card p-2 shadow-2xl">
+<div class="h-full flex items-center justify-center p-4 relative" v-motion :initial="{opacity:0, scale:0.9}" :enter="{opacity:1, scale:1, transition:{delay:400}}">
+  <div class="glass-card p-2 shadow-2xl relative">
     <img src="/desktop-preview.png" class="rounded-xl w-full h-full object-contain" />
+    <div class="absolute bottom-6 right-6 badge accent-green text-[9px] shadow-sm">Latency: < 1.2s</div>
   </div>
 </div>
 
@@ -272,9 +277,10 @@ layout: two-cols
 
 ::right::
 
-<div class="h-full flex items-center justify-center p-4" v-motion :initial="{opacity:0, scale:0.9}" :enter="{opacity:1, scale:1, transition:{delay:400}}">
-  <div class="glass-card p-2 shadow-2xl">
+<div class="h-full flex items-center justify-center p-4 relative" v-motion :initial="{opacity:0, scale:0.9}" :enter="{opacity:1, scale:1, transition:{delay:400}}">
+  <div class="glass-card p-2 shadow-2xl relative">
     <img src="/analysis-preview.png" class="rounded-xl w-full h-full object-contain" />
+    <div class="absolute bottom-6 right-6 badge accent-blue text-[9px] shadow-sm">Accuracy: 98.4%</div>
   </div>
 </div>
 
@@ -290,7 +296,12 @@ layout: center
   <img src="/architecture-diagram.png" class="rounded-xl w-full" />
 </div>
 
-<p class="mt-6 text-secondary text-center text-sm" v-motion :initial="{opacity:0}" :enter="{opacity:1, transition:{delay:300}}">Comprehensive Reasoning Loop: Think → Search → Act → Observe for high-precision repair guidance.</p>
+<div class="mt-6 flex flex-col items-center gap-2">
+  <p class="text-secondary text-center text-sm" v-motion :initial="{opacity:0}" :enter="{opacity:1, transition:{delay:300}}">Comprehensive Reasoning Loop: Think → Search → Act → Observe</p>
+  <div class="flex items-center gap-2 text-[10px] text-green-600 font-semibold" v-motion :initial="{opacity:0}" :enter="{opacity:1, transition:{delay:500}}">
+    <carbon-security class="text-sm" /> Privacy-First: Stateless processing. No user images are stored.
+  </div>
+</div>
 
 ---
 layout: default
@@ -366,6 +377,9 @@ layout: two-cols-header
 ---
 
 # Strategic Value
+<div class="text-[10px] font-bold text-blue-600/60 tracking-widest uppercase mt-1 mb-4" v-motion :initial="{opacity:0}" :enter="{opacity:1, transition:{delay:200}}">
+  Targeting the $500B Global Consumer Electronics Repair Market
+</div>
 
 ::left::
 
@@ -431,7 +445,7 @@ layout: center
       <div class="icon-box accent-cyan text-2xl">💻</div>
       <div class="icon-box accent-indigo text-2xl">🖥️</div>
     </div>
-    <p class="text-sm text-muted">Scan QR or click the link to try it now!</p>
+    <p class="text-[11px] text-muted italic">Scan QR & upload a photo of a broken device (e.g., cracked screen) <br/>to see Agentic Reasoning in action.</p>
   </div>
 </div>
 
@@ -441,32 +455,44 @@ layout: default
 
 # The Road Ahead
 
-<div class="badge bg-amber-50 text-amber-600 border-amber-100 mb-6" v-motion :initial="{opacity:0}" :enter="{opacity:1}">Roadmap 2025</div>
+<div class="badge bg-amber-50 text-amber-600 border-amber-100 mb-6" v-motion :initial="{opacity:0}" :enter="{opacity:1}">Execution Roadmap 2025</div>
 
 <div class="grid grid-cols-2 gap-6">
   <div class="glass-card p-4 flex items-start gap-4" v-motion :initial="{opacity:0, y:20}" :enter="{opacity:1, y:0}">
-    <div class="icon-box accent-rose shrink-0 w-10 h-10"><carbon-video class="text-lg" /></div>
+    <div class="flex flex-col items-center shrink-0">
+      <div class="icon-box accent-rose w-10 h-10"><carbon-video class="text-lg" /></div>
+      <div class="text-[9px] font-bold mt-2 text-rose-500">Q2 2025</div>
+    </div>
     <div>
       <div class="font-bold text-base">Video Diagnosis</div>
       <p class="text-xs text-muted leading-tight mt-1">Live repair stream analysis for dynamic issues.</p>
     </div>
   </div>
   <div class="glass-card p-4 flex items-start gap-4" v-motion :initial="{opacity:0, y:20}" :enter="{opacity:1, y:0, transition:{delay:100}}">
-    <div class="icon-box accent-indigo shrink-0 w-10 h-10"><carbon-view-mode-2 class="text-lg" /></div>
+    <div class="flex flex-col items-center shrink-0">
+      <div class="icon-box accent-indigo w-10 h-10"><carbon-view-mode-2 class="text-lg" /></div>
+      <div class="text-[9px] font-bold mt-2 text-indigo-500">Q3 2025</div>
+    </div>
     <div>
       <div class="font-bold text-base">AR Guidance</div>
       <p class="text-xs text-muted leading-tight mt-1">Hands-free overlays via smart glasses.</p>
     </div>
   </div>
   <div class="glass-card p-4 flex items-start gap-4" v-motion :initial="{opacity:0, y:20}" :enter="{opacity:1, y:0, transition:{delay:200}}">
-    <div class="icon-box accent-amber shrink-0 w-10 h-10"><carbon-shopping-cart class="text-lg" /></div>
+    <div class="flex flex-col items-center shrink-0">
+      <div class="icon-box accent-amber w-10 h-10"><carbon-shopping-cart class="text-lg" /></div>
+      <div class="text-[9px] font-bold mt-2 text-amber-600">Q4 2025</div>
+    </div>
     <div>
       <div class="font-bold text-base">Parts Marketplace</div>
       <p class="text-xs text-muted leading-tight mt-1">Direct links to purchase faulty parts.</p>
     </div>
   </div>
   <div class="glass-card p-4 flex items-start gap-4" v-motion :initial="{opacity:0, y:20}" :enter="{opacity:1, y:0, transition:{delay:300}}">
-    <div class="icon-box accent-cyan shrink-0 w-10 h-10"><carbon-enterprise class="text-lg" /></div>
+    <div class="flex flex-col items-center shrink-0">
+      <div class="icon-box accent-cyan w-10 h-10"><carbon-enterprise class="text-lg" /></div>
+      <div class="text-[9px] font-bold mt-2 text-cyan-600">2026+</div>
+    </div>
     <div>
       <div class="font-bold text-base">Enterprise SDK</div>
       <p class="text-xs text-muted leading-tight mt-1">White-label API for manufacturers.</p>
